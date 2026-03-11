@@ -439,3 +439,16 @@ nav a {
   padding: 80px 20px;
   text-align: center;
 }
+
+.export-map {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f4f7fb;
+}
+
+.map-container img {
+  max-width: 800px;
+  width: 100%;
+}
+
+

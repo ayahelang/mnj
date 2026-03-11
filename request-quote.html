@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Request Quotation | PT Mitra Nayla Jaya</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <section class="quote">
+      <h2>Request Quotation</h2>
+      <form id="quoteForm">
+        <input type="text" id="company" placeholder="Company Name" required />
+
+        <input type="email" id="email" placeholder="Business Email" required />
+
+        <input type="text" id="country" placeholder="Country" />
+
+        <select id="product">
+          <option>Silica Sand</option>
+          <option>Split Stone</option>
+          <option>Asphalt</option>
+        </select>
+
+        <input
+          type="text"
+          id="quantity"
+          placeholder="Required Quantity (Tons)"
+        />
+
+        <textarea id="spec" placeholder="Specification Needed"></textarea>
+
+        <button type="submit">Send Inquiry</button>
+      </form>
+    </section>
+  </body>
+</html>

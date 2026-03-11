@@ -17,6 +17,8 @@
     />
 
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="preload" href="js/script.js" as="script" />
   </head>
 
   <body>
@@ -35,7 +37,7 @@
 
     <section
       class="hero"
-      style="background: url(&quot;img/silica.jpg&quot;) center/cover no-repeat"
+      style="background: url(&quot;img/silica.png&quot;) center/cover no-repeat"
     >
       <div class="hero-overlay"></div>
 
@@ -47,45 +49,6 @@
           manufacturing, foundry and industrial applications.
         </p>
       </div>
-    </section>
-
-    <section class="products">
-      <h2>Silica Sand Specification</h2>
-
-      <table
-        style="
-          margin: auto;
-          max-width: 600px;
-          width: 100%;
-          background: white;
-          border-radius: 10px;
-        "
-      >
-        <tr>
-          <th>Parameter</th>
-          <th>Value</th>
-        </tr>
-
-        <tr>
-          <td>SiO2</td>
-          <td>98% – 99%</td>
-        </tr>
-
-        <tr>
-          <td>Fe2O3</td>
-          <td>&lt; 0.5%</td>
-        </tr>
-
-        <tr>
-          <td>Moisture</td>
-          <td>&lt; 5%</td>
-        </tr>
-
-        <tr>
-          <td>Size</td>
-          <td>0.5 – 1 mm</td>
-        </tr>
-      </table>
     </section>
 
     <section class="about">
@@ -118,9 +81,35 @@
       </ul>
     </section>
 
-    <a href="specification.pdf" class="cta-button">
-      Download Specification Sheet
-    </a>
+    <a href="specification.html"> View Specification </a>
+
+    <section class="products">
+      <h2>Silica Sand Specification</h2>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <h3>SiO2</h3>
+          <p>98% - 99%</p>
+        </div>
+
+        <div class="product-card">
+          <h3>Fe2O3</h3>
+          <p>&lt;0.5%</p>
+        </div>
+
+        <div class="product-card">
+          <h3>Moisture</h3>
+          <p>&lt;5%</p>
+        </div>
+
+        <div class="product-card">
+          <h3>Size</h3>
+          <p>0.5 - 1 mm</p>
+        </div>
+      </div>
+    </section>
+
+    <a href="request-quote.html" class="cta-button"> Request Quotation </a>
 
     <footer>
       <p>© 2026 PT Mitra Nayla Jaya</p>
