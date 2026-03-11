@@ -25,14 +25,14 @@ document.addEventListener("click", function (event) {
 
 // SMOOTH SCROLL MENU
 
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+// document.querySelectorAll('nav a').forEach(anchor => {
+//     anchor.addEventListener('click', function (e) {
+//         e.preventDefault();
+//         document.querySelector(this.getAttribute('href')).scrollIntoView({
+//             behavior: 'smooth'
+//         });
+//     });
+// });
 
 
 const reveal = document.querySelectorAll("section");
@@ -98,17 +98,6 @@ if (form) {
 }
 
 const revealElements = document.querySelectorAll("section");
-
-function revealOnScroll() {
-    let windowHeight = window.innerHeight;
-    revealElements.forEach(el => {
-        let position = el.getBoundingClientRect().top;
-        if (position < windowHeight - 100) {
-            el.style.opacity = "1";
-            el.style.transform = "translateY(0px)";
-        }
-    });
-}
 
 window.addEventListener("scroll", revealOnScroll);
 
