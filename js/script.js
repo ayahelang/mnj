@@ -1,3 +1,7 @@
+window.addEventListener("load", function () {
+    document.getElementById("loader").style.display = "none";
+});
+
 // WHATSAPP POPUP
 
 const waButton = document.getElementById("waButton");
@@ -28,6 +32,28 @@ document.querySelectorAll('nav a').forEach(anchor => {
             behavior: 'smooth'
         });
     });
+});
+
+
+const reveal = document.querySelectorAll("section");
+
+function revealOnScroll() {
+    let windowHeight = window.innerHeight;
+    reveal.forEach(el => {
+        let position = el.getBoundingClientRect().top;
+        if (position < windowHeight - 120) {
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0px)";
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+reveal.forEach(el => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(40px)";
+    el.style.transition = "all 0.6s ease";
 });
 
 // SIMPLE SCROLL ANIMATION
@@ -74,28 +100,71 @@ if (form) {
 const revealElements = document.querySelectorAll("section");
 
 function revealOnScroll() {
-
     let windowHeight = window.innerHeight;
-
     revealElements.forEach(el => {
-
         let position = el.getBoundingClientRect().top;
-
         if (position < windowHeight - 100) {
-
             el.style.opacity = "1";
             el.style.transform = "translateY(0px)";
-
         }
-
     });
-
 }
 
 window.addEventListener("scroll", revealOnScroll);
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        { pageLanguage: "en" },
+        "google_translate_element",
+    );
+}
 
 revealElements.forEach(el => {
     el.style.opacity = "0";
     el.style.transform = "translateY(40px)";
     el.style.transition = "all 0.7s ease";
 });
+
+document.getElementById("quoteForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var company = document.getElementById("company").value;
+    var email = document.getElementById("email").value;
+    var country = document.getElementById("country").value;
+    var product = document.getElementById("product").value;
+    var quantity = document.getElementById("quantity").value;
+    var spec = document.getElementById("spec").value;
+    var message =
+        "Hello PT Mitra Nayla Jaya,%0A%0A" +
+        "Company: " + company + "%0A" +
+        "Email: " + email + "%0A" +
+        "Country: " + country + "%0A" +
+        "Product: " + product + "%0A" +
+        "Quantity: " + quantity + " tons%0A" +
+        "Specification: " + spec;
+    var phone = "6285158822803";
+    window.open("https://wa.me/" + phone + "?text=" + message);
+});
+
+function toggleChat() {
+    var box = document.getElementById("chatBox");
+    if (box.style.display == "flex") {
+        box.style.display = "none";
+    } else {
+        box.style.display = "flex";
+    }
+}
+
+function handleKey(event) {
+    if (event.key === "Enter") {
+        var input = document.getElementById("chatInput");
+        var msg = input.value;
+        if (msg.trim() == "") return;
+        var chat = document.getElementById("chatMessages");
+        chat.innerHTML += "<div class='user-message'>" + msg + "</div>";
+        input.value = "";
+        setTimeout(function () {
+            // chat.innerHTML += "<div class='bot-message'>Thank you. Please contact our sales team via WhatsApp.</div>";
+            chat.innerHTML += "<div class='bot-message'>Thank you. Please continue to WhatsApp for faster response.<br><br><a href='https://wa.me/6285158822803'>Chat Sales</a></div>";
+        }, 800);
+    }
+}
