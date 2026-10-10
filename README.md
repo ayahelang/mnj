@@ -1,4 +1,4 @@
-# PT Mitra Nayla Jaya — Website Modern (mnj.my.id)
+# PT Mitra Nayla Jaya — Website Modern (mnj.web.id)
 
 Website logistics + mining supplier yang modern, fully responsive, dengan fitur tracking cargo, order form, admin panel & driver app.
 
@@ -29,7 +29,7 @@ mnj-new/
 1. Buat repo baru di GitHub (misal `mnj-website`)
 2. Upload seluruh isi folder `mnj-new`
 3. Settings → Pages → Source: main branch / root
-4. Custom domain: `mnj.my.id` (tambah CNAME file berisi `mnj.my.id`)
+4. Custom domain: `mnj.web.id` (tambah CNAME file berisi `mnj.web.id`)
 5. Di DNS domain, arahkan A/CNAME ke GitHub Pages
 
 ## Setup Backend (Supabase — Gratis)
