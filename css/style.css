@@ -86,7 +86,7 @@ button, input, select, textarea { font-family: inherit; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 70px;
   gap: 16px;
   flex-wrap: nowrap;
 }
@@ -101,9 +101,9 @@ button, input, select, textarea { font-family: inherit; }
 }
 .logo img.logo-img,
 .logo img {
-  height: 36px;
+  height: 56px;
   width: auto;
-  max-width: 180px;
+  max-width: 160px;
   object-fit: contain;
 }
 .logo span { display: none; } /* teks ekstra dibuang */
@@ -205,30 +205,34 @@ button, input, select, textarea { font-family: inherit; }
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 700px;
+  max-width: 720px;
   color: var(--white);
-  padding: 60px 0;
+  padding: 40px 0 32px;
 }
-.hero h1 {
-  font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+.hero h1,
+.hero .hero-title {
+  font-size: clamp(1.85rem, 4.5vw, 2.85rem);
   font-weight: 800;
-  line-height: 1.15;
+  line-height: 1.2;
   letter-spacing: -0.03em;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
-.hero h1 span { color: var(--gold); }
-.hero p {
-  font-size: 1.15rem;
+.hero h1 span,
+.hero .hero-title span { color: var(--gold); }
+.hero p,
+.hero .hero-desc {
+  font-size: 1rem;
   color: rgba(255,255,255,0.8);
-  margin-bottom: 36px;
-  max-width: 540px;
+  margin-bottom: 20px;
+  max-width: 520px;
+  line-height: 1.55;
 }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 16px; }
 .hero-stats {
   display: flex;
   gap: 40px;
-  margin-top: 56px;
-  padding-top: 32px;
+  margin-top: 28px;
+  padding-top: 20px;
   border-top: 1px solid rgba(255,255,255,0.1);
 }
 .stat-item h3 {
@@ -240,7 +244,7 @@ button, input, select, textarea { font-family: inherit; }
 
 /* Tracking bar in hero */
 .track-bar {
-  margin-top: 40px;
+  margin-top: 8px;
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: var(--radius-lg);
@@ -666,7 +670,7 @@ tr:hover td { background: var(--gray-50, #fafbfc); }
 @media (max-width: 1100px) {
   .nav { gap: 14px; }
   .nav a { font-size: 0.82rem; }
-  .logo img { height: 32px; max-width: 150px; }
+  .logo img { height: 48px; max-width: 140px; }
 }
 @media (max-width: 992px) {
   .nav { display: none; }
@@ -698,6 +702,6 @@ tr:hover td { background: var(--gray-50, #fafbfc); }
   .footer-grid { grid-template-columns: 1fr; }
   .track-input-group { flex-direction: column; }
   .section { padding: 56px 0; }
-  .logo img { height: 30px; max-width: 140px; }
+  .logo img { height: 44px; max-width: 130px; }
   .header-actions .btn { padding: 8px 14px; font-size: 0.8rem; }
 }

@@ -13,7 +13,7 @@
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png" />
-  <link rel="apple-touch-icon" href="img/logo_mitranayla.png" />
+  <link rel="apple-touch-icon" href="img/logo-stacked.png" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
@@ -43,7 +43,7 @@
     "name": "PT Mitra Nayla Jaya",
     "alternateName": "MNJ",
     "url": "https://mnj.web.id",
-    "logo": "https://mnj.web.id/img/logo_mitranayla.png",
+    "logo": "https://mnj.web.id/img/logo-stacked.png",
     "description": "Supplier material tambang (pasir silika, batu bara, antrasit, batu split, aspal) dan layanan logistik terintegrasi di Indonesia.",
     "address": {
       "@type": "PostalAddress",
@@ -78,7 +78,7 @@
   <header class="header" id="header">
     <div class="container header-inner">
       <a href="index.html" class="logo">
-        <img src="img/logo_mitranayla.png" alt="PT Mitra Nayla Jaya" class="logo-img" />
+        <img src="img/logo-stacked.png" alt="PT Mitra Nayla Jaya" class="logo-img" />
       </a>
       <nav class="nav" id="nav">
         <a href="index.html" class="active" data-page="home">Beranda</a>
@@ -101,17 +101,22 @@
     <div class="hero-bg"></div>
     <div class="container hero-content">
       <div class="badge">★ General Supplier · Contractor · Transport</div>
-      <h1>Material Tambang Berkualitas & <span>Logistik Andal</span></h1>
-      <p>PT Mitra Nayla Jaya menyediakan pasir silika, batu bara, antrasit, batu split, aspal dan layanan pengiriman terintegrasi. Dari tambang hingga lokasi proyek Anda — tepat waktu, transparan, terlacak.</p>
-      <div class="hero-ctas">
-        <a href="#products" class="btn btn-primary">Lihat Produk</a>
-        <a href="track.html" class="btn btn-outline">Lacak Pengiriman</a>
+      <h1 class="hero-title">
+        Material Tambang<br>
+        Berkualitas &amp; <span>Logistik</span><br>
+        <span>Andal</span>
+      </h1>
+      <p class="hero-desc">Pasir silika, batu bara, antrasit, batu split, aspal &amp; logistik terintegrasi — tepat waktu, transparan, terlacak.</p>
+
+      <!-- Quick Track — visible above the fold -->
+      <div class="track-bar">
+        <input type="text" id="quickTrack" placeholder="Masukkan nomor resi / kode booking..." />
+        <button class="btn btn-primary" onclick="quickTrack()">Lacak</button>
       </div>
 
-      <!-- Quick Track -->
-      <div class="track-bar">
-        <input type="text" id="quickTrack" placeholder="Masukkan nomor resi / tracking ID..." />
-        <button class="btn btn-primary" onclick="quickTrack()">Lacak</button>
+      <div class="hero-ctas" style="margin-top:20px">
+        <a href="#products" class="btn btn-primary">Lihat Produk</a>
+        <a href="track.html" class="btn btn-outline">Lacak Pengiriman</a>
       </div>
 
       <div class="hero-stats">
@@ -376,7 +381,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="logo" style="margin-bottom:12px">
-            <img src="img/logo_mitranayla.png" alt="PT Mitra Nayla Jaya" style="height:32px;width:auto;" />
+            <img src="img/logo-stacked.png" alt="PT Mitra Nayla Jaya" style="height:48px;width:auto;" />
           </div>
           <p>General Supplier, Contractor & Transport Services. Material tambang berkualitas + logistik terintegrasi untuk industri Indonesia.</p>
         </div>
