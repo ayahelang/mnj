@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://mnj.my.id/sitemap.xml
+
+# Disallow admin & driver private areas (optional, bisa diubah)
+Disallow: /admin/
+Disallow: /driver/

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PT Mitra Nayla Jaya | Supplier Material Tambang & Logistik Indonesia</title>
+  <meta name="description" content="PT Mitra Nayla Jaya — Pemasok pasir silika, batu bara, antrasit, batu split, aspal & layanan logistik terpercaya. Tracking real-time, siap kirim seluruh Indonesia & ekspor." />
+  <meta name="keywords" content="pasir silika indonesia, supplier batu bara, antrasit, batu split, aspal, logistik tambang, mitra nayla jaya, silica sand supplier, steam coal indonesia" />
+  <meta name="author" content="PT Mitra Nayla Jaya" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <link rel="canonical" href="https://mnj.my.id/" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link rel="apple-touch-icon" href="img/logo_mitranayla.png" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mnj.my.id/" />
+  <meta property="og:title" content="PT Mitra Nayla Jaya | Supplier Material Tambang & Logistik Indonesia" />
+  <meta property="og:description" content="Pemasok pasir silika, batu bara, antrasit, batu split, aspal & layanan logistik terpercaya. Tracking real-time, siap kirim seluruh Indonesia & ekspor." />
+  <meta property="og:image" content="https://mnj.my.id/img/mining4.jpg" />
+  <meta property="og:locale" content="id_ID" />
+  <meta property="og:site_name" content="PT Mitra Nayla Jaya" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PT Mitra Nayla Jaya | Supplier Material Tambang & Logistik" />
+  <meta name="twitter:description" content="Pemasok pasir silika, batu bara, antrasit, batu split, aspal & logistik terpercaya. Tracking real-time." />
+  <meta name="twitter:image" content="https://mnj.my.id/img/mining4.jpg" />
+
+  <!-- Geo & Language -->
+  <meta name="geo.region" content="ID-BT" />
+  <meta name="geo.placename" content="Cilegon, Banten" />
+  <meta name="language" content="Indonesian" />
+
+  <!-- Structured Data (Organization) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PT Mitra Nayla Jaya",
+    "alternateName": "MNJ",
+    "url": "https://mnj.my.id",
+    "logo": "https://mnj.my.id/img/logo_mitranayla.png",
+    "description": "Supplier material tambang (pasir silika, batu bara, antrasit, batu split, aspal) dan layanan logistik terintegrasi di Indonesia.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jl. Lingkar Selatan KM 2, Komp. Metro Villa Blok D2 No.02",
+      "addressLocality": "Cilegon",
+      "addressRegion": "Banten",
+      "addressCountry": "ID"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+62-851-5882-2803",
+      "contactType": "sales",
+      "availableLanguage": ["Indonesian", "English"]
+    },
+    "sameAs": ["https://www.mitranaylajaya.com"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/logo_mitranayla.png" alt="MNJ Logo" onerror="this.style.display='none'" />
+        <span>Mitra Nayla</span> Jaya
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#home" class="active">Beranda</a>
+        <a href="#products">Produk</a>
+        <a href="#about">Tentang</a>
+        <a href="track.html">Lacak Kiriman</a>
+        <a href="#order">Order</a>
+        <a href="#clients">Klien</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+      <div class="header-actions">
+        <a href="track.html" class="btn btn-outline">Lacak Cargo</a>
+        <a href="#order" class="btn btn-primary">Order Sekarang</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="badge">★ General Supplier · Contractor · Transport</div>
+      <h1>Material Tambang Berkualitas & <span>Logistik Andal</span></h1>
+      <p>PT Mitra Nayla Jaya menyediakan pasir silika, batu bara, antrasit, batu split, aspal dan layanan pengiriman terintegrasi. Dari tambang hingga lokasi proyek Anda — tepat waktu, transparan, terlacak.</p>
+      <div class="hero-ctas">
+        <a href="#products" class="btn btn-primary">Lihat Produk</a>
+        <a href="track.html" class="btn btn-outline">Lacak Pengiriman</a>
+      </div>
+
+      <!-- Quick Track -->
+      <div class="track-bar">
+        <input type="text" id="quickTrack" placeholder="Masukkan nomor resi / tracking ID..." />
+        <button class="btn btn-primary" onclick="quickTrack()">Lacak</button>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <h3>50+</h3>
+          <p>Klien Industri</p>
+        </div>
+        <div class="stat-item">
+          <h3>100%</h3>
+          <p>Legal & Berizin</p>
+        </div>
+        <div class="stat-item">
+          <h3>24/7</h3>
+          <p>Support & Tracking</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="section" id="products">
+    <div class="container">
+      <div class="badge">Produk Kami</div>
+      <h2 class="section-title">Material Industri Berkualitas Tinggi</h2>
+      <p class="section-sub">Dari pasir silika kemurnian tinggi hingga batu bara termal — semua dilengkapi COA laboratorium resmi dan dukungan logistik penuh.</p>
+
+      <div class="products-grid">
+        <!-- Silika -->
+        <article class="product-card">
+          <div class="img-wrap"><img src="img/silika.png" alt="Pasir Silika" loading="lazy" /></div>
+          <div class="body">
+            <h3>Pasir Silika</h3>
+            <p>Kemurnian tinggi, mesh seragam. Untuk filter air, sandblasting, keramik, kaca & smelter nikel.</p>
+            <div class="tags"><span class="tag">SiO₂ tinggi</span><span class="tag">Mesh custom</span><span class="tag">COA Lab</span></div>
+            <a href="#order" class="btn btn-navy" style="width:100%">Order Produk</a>
+          </div>
+        </article>
+        <!-- Batu Bara -->
+        <article class="product-card">
+          <div class="img-wrap"><img src="img/mining4.jpg" alt="Batu Bara" loading="lazy" /></div>
+          <div class="body">
+            <h3>Batu Bara (Steam Coal)</h3>
+            <p>GAR 4200–6300. Loading jetty Kalimantan / Sumatra. Long-term supply untuk PLTU & industri.</p>
+            <div class="tags"><span class="tag">GAR 4200-6300</span><span class="tag">FOB/CIF</span><span class="tag">Legal</span></div>
+            <a href="#order" class="btn btn-navy" style="width:100%">Order Produk</a>
+          </div>
+        </article>
+        <!-- Antrasit -->
+        <article class="product-card">
+          <div class="img-wrap"><img src="img/mining1.jpg" alt="Antrasit" loading="lazy" /></div>
+          <div class="body">
+            <h3>Antrasit</h3>
+            <p>Fixed Carbon >80%, Ash <8%. Media filter WTP/WWTP, industri kimia & metalurgi.</p>
+            <div class="tags"><span class="tag">High Carbon</span><span class="tag">0.8–2 mm</span><span class="tag">Impor/Lokal</span></div>
+            <a href="#order" class="btn btn-navy" style="width:100%">Order Produk</a>
+          </div>
+        </article>
+        <!-- Batu Split -->
+        <article class="product-card">
+          <div class="img-wrap"><img src="img/splitstone.png" alt="Batu Split" loading="lazy" /></div>
+          <div class="body">
+            <h3>Batu Split</h3>
+            <p>Andesit/granit 0–50 mm. Untuk jalan, jembatan, ready-mix & infrastruktur nasional.</p>
+            <div class="tags"><span class="tag">0-5 s/d 30-50</span><span class="tag">Dari Quarry</span><span class="tag">Volume Besar</span></div>
+            <a href="#order" class="btn btn-navy" style="width:100%">Order Produk</a>
+          </div>
+        </article>
+        <!-- Aspal -->
+        <article class="product-card">
+          <div class="img-wrap"><img src="img/asphalt.jpg" alt="Aspal" loading="lazy" /></div>
+          <div class="body">
+            <h3>Aspal / Bitumen</h3>
+            <p>Drum Pen 60/70 & curah. Standar Shell, Pertamina, IRPC. Jalan tol, bandara, waterproofing.</p>
+            <div class="tags"><span class="tag">Pen 60/70</span><span class="tag">Bulk/Drum</span><span class="tag">Stabil</span></div>
+            <a href="#order" class="btn btn-navy" style="width:100%">Order Produk</a>
+          </div>
+        </article>
+        <!-- Pasir Bangka -->
+        <article class="product-card">
+          <div class="img-wrap"><img src="img/silika.jpg" alt="Pasir Bangka" loading="lazy" /></div>
+          <div class="body">
+            <h3>Pasir Bangka</h3>
+            <p>Tekstur halus, putih keabu-abuan. Plesteran, acian, urug premium & ready-mix berkualitas.</p>
+            <div class="tags"><span class="tag">Bebas Lumpur</span><span class="tag">Disaring</span><span class="tag">Premium</span></div>
+            <a href="#order" class="btn btn-navy" style="width:100%">Order Produk</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about" style="background:var(--white)">
+    <div class="container about-grid">
+      <div class="about-img">
+        <img src="img/mining2.jpg" alt="Operasional MNJ" loading="lazy" />
+      </div>
+      <div>
+        <div class="badge">Tentang Kami</div>
+        <h2 class="section-title">Manusia adalah Aset Paling Berharga</h2>
+        <p style="color:var(--gray-500);margin-bottom:20px">Dengan tenaga ahli dan profesionalisme tinggi, kami menghadirkan produk batu bara, pasir silika, pasir Bangka, batu split, antrasit & aspal yang sesuai standar industri serta ekspektasi pelanggan.</p>
+        <p style="color:var(--gray-500)">PT Mitra Nayla Jaya bergerak di bidang produksi & distribusi material tambang, mengedepankan efisiensi proses dan inovasi berkelanjutan untuk menghasilkan produk bernilai tinggi, multifungsi, dan kompetitif.</p>
+
+        <div class="visi-box">
+          <h4>VISI</h4>
+          <p style="font-size:0.95rem;opacity:0.9">Menjadi perusahaan terdepan dan terpercaya dalam industri pasir silika & material tambang, menciptakan produk berkualitas tinggi untuk pasar nasional maupun internasional.</p>
+          <ul class="misi-list">
+            <li>Menyediakan produk terbaik melalui proses efisien & berkualitas</li>
+            <li>Menjadi mitra bisnis profesional dan dapat diandalkan</li>
+            <li>Menjaga mutu & layanan demi kepuasan pelanggan</li>
+            <li>Berkontribusi bagi kemajuan masyarakat, bangsa & negara</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="badge">Layanan</div>
+      <h2 class="section-title">Solusi Menyeluruh dari Tambang ke Proyek</h2>
+      <p class="section-sub">Kami tidak hanya menjual produk — kami memberikan solusi logistik terintegrasi.</p>
+      <div class="products-grid">
+        <div class="product-card" style="padding:32px">
+          <h3 style="color:var(--gold);font-size:1.5rem;margin-bottom:12px">①</h3>
+          <h3>Konsultasi Material</h3>
+          <p>Bantu tentukan spesifikasi tepat untuk water treatment, sandblasting, konstruksi atau industri Anda.</p>
+        </div>
+        <div class="product-card" style="padding:32px">
+          <h3 style="color:var(--gold);font-size:1.5rem;margin-bottom:12px">②</h3>
+          <h3>Supply & Distribusi</h3>
+          <p>Pasokan stabil, pengiriman tepat waktu ke seluruh Indonesia dengan armada profesional.</p>
+        </div>
+        <div class="product-card" style="padding:32px">
+          <h3 style="color:var(--gold);font-size:1.5rem;margin-bottom:12px">③</h3>
+          <h3>Uji Kualitas & COA</h3>
+          <p>Setiap batch dilengkapi hasil uji laboratorium resmi (Sucofindo, dll) untuk jaminan kualitas.</p>
+        </div>
+        <div class="product-card" style="padding:32px">
+          <h3 style="color:var(--gold);font-size:1.5rem;margin-bottom:12px">④</h3>
+          <h3>Tracking Real-time</h3>
+          <p>Pantau posisi cargo secara live. Driver confirm via GPS + barcode. Transparansi penuh.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <section class="section" id="clients" style="background:var(--white)">
+    <div class="container">
+      <div class="badge">Dipercaya Oleh</div>
+      <h2 class="section-title">Klien & Mitra Kami</h2>
+      <p class="section-sub">Lebih dari 50 perusahaan industri, konstruksi & energy mempercayai pasokan kami.</p>
+      <div class="clients-grid">
+        <div class="client-logo">Indonesia Ethanol Industry</div>
+        <div class="client-logo">PT CBA Chemical</div>
+        <div class="client-logo">PT Elnusa Pipe Coating</div>
+        <div class="client-logo">HarbisonWalker (HWI)</div>
+        <div class="client-logo">PT Jatiroof</div>
+        <div class="client-logo">PT Suprabakti Mandiri</div>
+        <div class="client-logo">Mapei Indonesia</div>
+        <div class="client-logo">PT RUI New Energy</div>
+        <div class="client-logo">PT Adhi Karya (Persero)</div>
+        <div class="client-logo">PT Indra Puro Industri</div>
+        <div class="client-logo">INVIRO</div>
+        <div class="client-logo">Krakatau Steel</div>
+        <div class="client-logo">Krakatau Posco</div>
+        <div class="client-logo">PT PP</div>
+        <div class="client-logo">Bukaka</div>
+        <div class="client-logo">IKN</div>
+        <div class="client-logo">PDAM</div>
+        <div class="client-logo">SUN Natural</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER -->
+  <section class="section order-section" id="order">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:40px">
+        <div class="badge">Pesan Sekarang</div>
+        <h2 class="section-title">Form Order Produk</h2>
+        <p class="section-sub" style="margin:0 auto">Isi form di bawah. Tim kami (Teddy Mulyana) akan segera menghubungi via WhatsApp.</p>
+      </div>
+      <div class="order-card">
+        <form id="orderForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nama">Nama Lengkap *</label>
+              <input type="text" id="nama" name="nama" required placeholder="Nama Anda" />
+            </div>
+            <div class="form-group">
+              <label for="wa">Nomor WhatsApp *</label>
+              <input type="tel" id="wa" name="wa" required placeholder="08xxxxxxxxxx" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email (opsional)</label>
+              <input type="email" id="email" name="email" placeholder="email@perusahaan.com" />
+            </div>
+            <div class="form-group">
+              <label for="perusahaan">Nama Perusahaan *</label>
+              <input type="text" id="perusahaan" name="perusahaan" required placeholder="PT / CV Anda" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="produk">Detail Produk yang Diinginkan *</label>
+            <textarea id="produk" name="produk" rows="3" required placeholder="Contoh: Pasir Silika mesh 20-40, 50 ton, untuk filter air..."></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="budget">Budget Harga (opsional)</label>
+              <input type="text" id="budget" name="budget" placeholder="Contoh: Rp 50jt / ton" />
+            </div>
+            <div class="form-group">
+              <label for="lokasi">Lokasi Pengiriman *</label>
+              <input type="text" id="lokasi" name="lokasi" required placeholder="Kota / Alamat lengkap" />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;padding:16px;font-size:1rem;margin-top:8px">
+            Kirim Permintaan Order
+          </button>
+          <p class="form-note" style="text-align:center;margin-top:12px">Data tersimpan aman. Kami akan balas via WA dalam 1×24 jam kerja.</p>
+        </form>
+        <div id="orderSuccess" style="display:none;text-align:center;padding:40px 20px">
+          <div style="font-size:3rem;margin-bottom:16px">✅</div>
+          <h3 style="color:var(--navy);margin-bottom:8px">Permintaan Terkirim!</h3>
+          <p style="color:var(--gray-500)">Tim marketing kami akan segera menghubungi Anda via WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact" style="background:var(--white)">
+    <div class="container" style="text-align:center">
+      <div class="badge">Hubungi Kami</div>
+      <h2 class="section-title">Siap Membantu Proyek Anda</h2>
+      <p class="section-sub" style="margin:0 auto 40px">Kantor Pusat · Tim Profesional · Response Cepat</p>
+      <div class="products-grid" style="max-width:900px;margin:0 auto">
+        <div class="product-card" style="padding:28px;text-align:left">
+          <h3 style="margin-bottom:12px">📍 Alamat</h3>
+          <p>Jl. Lingkar Selatan KM 2 – Prov. Banten<br/>Komp. Metro Villa Blok D2 No.02, Cilegon</p>
+        </div>
+        <div class="product-card" style="padding:28px;text-align:left">
+          <h3 style="margin-bottom:12px">📞 WhatsApp</h3>
+          <p><a href="https://wa.me/6285158822803" target="_blank" style="color:var(--gold);font-weight:600">+62 851-5882-2803</a><br/>Teddy Mulyana — Marketing</p>
+        </div>
+        <div class="product-card" style="padding:28px;text-align:left">
+          <h3 style="margin-bottom:12px">✉️ Email</h3>
+          <p>mitranaylajaya99@gmail.com<br/>www.mitranaylajaya.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="margin-bottom:12px"><span>Mitra Nayla</span> Jaya</div>
+          <p>General Supplier, Contractor & Transport Services. Material tambang berkualitas + logistik terintegrasi untuk industri Indonesia.</p>
+        </div>
+        <div>
+          <h4>Produk</h4>
+          <ul>
+            <li><a href="#products">Pasir Silika</a></li>
+            <li><a href="#products">Batu Bara</a></li>
+            <li><a href="#products">Antrasit</a></li>
+            <li><a href="#products">Batu Split</a></li>
+            <li><a href="#products">Aspal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Layanan</h4>
+          <ul>
+            <li><a href="track.html">Lacak Kiriman</a></li>
+            <li><a href="#order">Order Produk</a></li>
+            <li><a href="admin/">Admin Panel</a></li>
+            <li><a href="driver/">Driver App</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Kontak</h4>
+          <ul>
+            <li>WA: 0851-5882-2803</li>
+            <li>mitranaylajaya99@gmail.com</li>
+            <li>Banten, Indonesia</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025–2026 PT Mitra Nayla Jaya. All rights reserved.</span>
+        <span>Domain: mnj.my.id</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WA -->
+  <a href="https://wa.me/6285158822803?text=Halo%20Teddy%2C%20saya%20tertarik%20dengan%20produk%20MNJ" class="wa-float" target="_blank" aria-label="Chat WhatsApp Teddy">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

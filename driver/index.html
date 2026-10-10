@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Driver App | MNJ Logistics</title>
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body style="background:var(--gray-100)">
+  <header class="header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo"><span>MNJ</span> Driver</a>
+      <button class="btn btn-primary" onclick="alert('Login Google OAuth — setelah setup Supabase, driver login dengan Gmail yang sudah di-grant admin.')">Login Google</button>
+    </div>
+  </header>
+
+  <main style="padding:100px 0 60px">
+    <div class="container" style="max-width:480px">
+      <div class="order-card" style="text-align:center">
+        <div class="badge">Driver Mode</div>
+        <h2 style="margin-bottom:8px">Halo, Driver</h2>
+        <p style="color:var(--gray-500);margin-bottom:24px">Login untuk melihat tugas & konfirmasi pickup.</p>
+
+        <div style="background:var(--gray-100);border-radius:16px;padding:24px;margin-bottom:24px">
+          <div style="font-size:0.85rem;color:var(--gray-500)">QR Code Driver Anda</div>
+          <div style="font-size:1.4rem;font-weight:700;letter-spacing:2px;margin:12px 0;color:var(--navy)">DRV-BUD-001</div>
+          <div style="width:160px;height:160px;margin:0 auto;background:#fff;border:2px solid var(--gray-200);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:var(--gray-500)">
+            [QR Placeholder]<br/>Scan di lokasi pickup
+          </div>
+          <p style="font-size:0.8rem;color:var(--gray-500);margin-top:12px">Admin generate QR ini. Tunjukkan / scan saat pickup.</p>
+        </div>
+
+        <div style="text-align:left;margin-bottom:24px">
+          <h4 style="margin-bottom:12px">Tugas Hari Ini</h4>
+          <div style="background:var(--gray-100);border-radius:12px;padding:16px;margin-bottom:12px">
+            <div style="font-weight:600">MNJ-2026-001234</div>
+            <div style="font-size:0.9rem;color:var(--gray-500)">Pasir Silika 25t → Jakarta</div>
+            <div style="margin-top:12px;display:flex;gap:8px">
+              <button class="btn btn-primary" style="flex:1;padding:10px" onclick="confirmPickup()">✓ Sudah Pickup</button>
+              <button class="btn btn-navy" style="flex:1;padding:10px" onclick="shareLocation()">📍 Share Lokasi</button>
+            </div>
+          </div>
+        </div>
+
+        <p style="font-size:0.8rem;color:var(--gray-500)">
+          Saat tekan “Sudah Pickup”, browser akan minta izin lokasi. Sistem mencocokkan koordinat HP Anda dengan lokasi gudang/barang.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function confirmPickup() {
+      if (!navigator.geolocation) {
+        alert('Browser tidak support geolocation');
+        return;
+      }
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          const { latitude, longitude } = pos.coords;
+          // Di production: kirim ke Supabase + cek jarak ke koordinat gudang
+          alert(`Lokasi terdeteksi: ${latitude.toFixed(5)}, ${longitude.toFixed(5)}\n\n(Demo) Sistem akan mencocokkan dengan lokasi barang. Jika cocok → status diupdate ke "Picked Up".`);
+        },
+        (err) => alert('Gagal ambil lokasi: ' + err.message)
+      );
+    }
+    function shareLocation() {
+      if (!navigator.geolocation) return;
+      navigator.geolocation.getCurrentPosition((pos) => {
+        alert(`Lokasi dibagikan: ${pos.coords.latitude.toFixed(5)}, ${pos.coords.longitude.toFixed(5)}\nUpdate dikirim ke sistem tracking.`);
+      });
+    }
+  </script>
+</body>
+</html>

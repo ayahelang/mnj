@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel | MNJ Logistics</title>
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="panel-layout">
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="logo"><span>MNJ</span> Admin</div>
+        <div style="font-size:0.75rem;opacity:0.6;margin-top:4px">admin@silverhawk.web.id</div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="active">📊 Dashboard</a>
+        <a href="#shipments">📦 Shipments</a>
+        <a href="#drivers">🚚 Drivers</a>
+        <a href="#orders">📝 Orders</a>
+        <a href="#qr">🔲 Generate QR</a>
+        <a href="../index.html">← Kembali ke Website</a>
+      </nav>
+    </aside>
+    <main class="panel-main">
+      <div class="panel-header">
+        <h1 style="font-size:1.5rem;font-weight:700">Dashboard</h1>
+        <div>
+          <button class="btn btn-primary" onclick="alert('Login Google OAuth via Supabase akan diaktifkan setelah setup project. Admin: admin@silverhawk.web.id')">Login dengan Google</button>
+        </div>
+      </div>
+
+      <div class="stat-cards">
+        <div class="stat-card"><h3>12</h3><p>Shipment Aktif</p></div>
+        <div class="stat-card"><h3>8</h3><p>Driver Online</p></div>
+        <div class="stat-card"><h3>5</h3><p>Order Baru Hari Ini</p></div>
+        <div class="stat-card"><h3>98%</h3><p>On-time Rate</p></div>
+      </div>
+
+      <div class="table-wrap" id="shipments">
+        <div style="padding:16px 20px;border-bottom:1px solid var(--gray-200);font-weight:600">Shipment Aktif</div>
+        <table>
+          <thead>
+            <tr><th>Tracking ID</th><th>Produk</th><th>Driver</th><th>Status</th><th>Update</th><th>Aksi</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>MNJ-2026-001234</strong></td>
+              <td>Pasir Silika 25t</td>
+              <td>Budi Santoso</td>
+              <td><span class="status-badge" style="background:var(--gold);color:var(--navy)">Dalam Perjalanan</span></td>
+              <td>14:22</td>
+              <td><button class="btn btn-navy" style="padding:6px 12px;font-size:0.8rem">Detail</button></td>
+            </tr>
+            <tr>
+              <td><strong>MNJ-2026-001235</strong></td>
+              <td>Batu Split 40t</td>
+              <td>Andi Wijaya</td>
+              <td><span class="status-badge">Pickup</span></td>
+              <td>13:05</td>
+              <td><button class="btn btn-navy" style="padding:6px 12px;font-size:0.8rem">Detail</button></td>
+            </tr>
+            <tr>
+              <td><strong>MNJ-2026-001230</strong></td>
+              <td>Antrasit 10t</td>
+              <td>Rudi Hartono</td>
+              <td><span class="status-badge" style="background:var(--gray-500)">Selesai</span></td>
+              <td>Kemarin</td>
+              <td><button class="btn btn-navy" style="padding:6px 12px;font-size:0.8rem">Detail</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:32px" id="drivers">
+        <div class="table-wrap">
+          <div style="padding:16px 20px;border-bottom:1px solid var(--gray-200);display:flex;justify-content:space-between;align-items:center">
+            <span style="font-weight:600">Drivers</span>
+            <button class="btn btn-primary" style="padding:8px 16px;font-size:0.85rem" onclick="alert('Fitur: Admin generate QR/Barcode unik per driver. Driver scan di lokasi pickup → sistem cek GPS HP driver cocok dengan koordinat gudang/barang.')">+ Tambah Driver + Generate QR</button>
+          </div>
+          <table>
+            <thead>
+              <tr><th>Nama</th><th>Email (Google)</th><th>Status</th><th>QR Code</th><th>Aksi</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Budi Santoso</td>
+                <td>budi.driver@gmail.com</td>
+                <td><span style="color:var(--success)">● Online</span></td>
+                <td><code>DRV-BUD-001</code></td>
+                <td><button class="btn btn-navy" style="padding:6px 12px;font-size:0.8rem">Lihat QR</button></td>
+              </tr>
+              <tr>
+                <td>Andi Wijaya</td>
+                <td>andi.w@gmail.com</td>
+                <td><span style="color:var(--success)">● Online</span></td>
+                <td><code>DRV-AND-002</code></td>
+                <td><button class="btn btn-navy" style="padding:6px 12px;font-size:0.8rem">Lihat QR</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div style="margin-top:32px;background:var(--white);padding:24px;border-radius:var(--radius);box-shadow:var(--shadow)" id="qr">
+        <h3 style="margin-bottom:12px">Cara Kerja Tracking & QR</h3>
+        <ol style="padding-left:20px;color:var(--gray-700);font-size:0.95rem;line-height:1.8">
+          <li>Admin login dengan Google (admin@silverhawk.web.id) via Supabase Auth.</li>
+          <li>Admin tambah driver → grant role “driver” → generate unique QR/Barcode.</li>
+          <li>Driver login Google di halaman /driver → lihat QR-nya.</li>
+          <li>Saat pickup: driver scan QR di lokasi barang ATAU tekan “Sudah Pickup”.</li>
+          <li>Sistem cek geolocation HP driver vs koordinat gudang/barang (tolerance ~100–200m).</li>
+          <li>Jika cocok → status update “Picked Up”, lokasi mulai di-track real-time.</li>
+          <li>Customer buka /track.html + input nomor resi → lihat map + timeline live.</li>
+        </ol>
+        <p style="margin-top:16px;font-size:0.9rem;color:var(--gray-500)">Backend direkomendasikan: <strong>Supabase</strong> (Auth Google, Postgres, Realtime, Edge Functions). Frontend sudah siap dihubungkan.</p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
