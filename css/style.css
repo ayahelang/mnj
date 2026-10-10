@@ -22,7 +22,7 @@
   --shadow: 0 4px 24px rgba(10,37,64,0.08);
   --shadow-lg: 0 12px 40px rgba(10,37,64,0.12);
   --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
-  --font: 'Inter', system-ui, -apple-system, sans-serif;
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -183,7 +183,7 @@ button, input, select, textarea { font-family: inherit; }
 /* ========== HERO ========== */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   background: var(--navy-dark);
@@ -598,7 +598,7 @@ button, input, select, textarea { font-family: inherit; }
 .panel-layout {
   display: grid;
   grid-template-columns: 260px 1fr;
-  min-height: 100vh;
+  min-height: 100svh;
 }
 .sidebar {
   background: var(--navy-dark);
@@ -705,3 +705,8 @@ tr:hover td { background: var(--gray-50, #fafbfc); }
   .logo img { height: 44px; max-width: 130px; }
   .header-actions .btn { padding: 8px 14px; font-size: 0.8rem; }
 }
+
+
+/* Perf: skip rendering offscreen sections */
+.section { content-visibility: auto; contain-intrinsic-size: auto 500px; }
+.footer { content-visibility: auto; contain-intrinsic-size: auto 300px; }
