@@ -15,20 +15,27 @@
   <meta property="og:type" content="website" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://silverhawk.web.id/lock/lock.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
-<body>
+<body
+  data-shlock-mode="ultimate"
+  data-shlock-domain="mnj.web.id,localhost,127.0.0.1"
+  data-shlock-brand="PT Mitra Nayla Jaya"
+>
   <header class="header" id="header">
     <div class="container header-inner">
       <a href="index.html" class="logo">
         <img src="img/logo_mitranayla.png" alt="PT Mitra Nayla Jaya" class="logo-img" />
       </a>
       <nav class="nav" id="nav">
-        <a href="index.html">Beranda</a>
-        <a href="index.html#products">Produk</a>
-        <a href="track.html" class="active">Lacak Kiriman</a>
-        <a href="index.html#order">Order</a>
-        <a href="index.html#contact">Kontak</a>
+        <a href="index.html" data-page="home">Beranda</a>
+        <a href="index.html#products" data-page="products">Produk</a>
+        <a href="index.html#about" data-page="about">Tentang</a>
+        <a href="track.html" class="active" data-page="track">Lacak Kiriman</a>
+        <a href="index.html#order" data-page="order">Order</a>
+        <a href="index.html#clients" data-page="clients">Klien</a>
+        <a href="index.html#contact" data-page="contact">Kontak</a>
       </nav>
       <div class="header-actions">
         <a href="index.html#order" class="btn btn-primary">Order Now</a>
@@ -130,6 +137,8 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/header.js"></script>
+  <script src="https://silverhawk.web.id/lock/lock.js"></script>
   <script>
     let map, marker;
     function doTrack() {
